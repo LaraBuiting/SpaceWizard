@@ -22,7 +22,6 @@ public class PlayerMovent : MonoBehaviour
     public Animator animator;
 
     private float horizontal;
-    private bool isFacingRight = true;
 
     public Transform groundcheck;
     public LayerMask groundlayer;

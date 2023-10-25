@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
@@ -15,12 +16,12 @@ public class Score : MonoBehaviour
         MyscoreText.text = "Score : " + ScoreNum;
     }
 
-    private void OnTriggerEnter2D(Collider2D Coin)
+    private void OnTriggerEnter2D(Collider2D Item)
     {
-        if (Coin.tag == "Coin")
+        if (Item.tag == "Item")
         {
             ScoreNum++;
-            Destroy(Coin.gameObject);
+            Destroy(Item.gameObject);
             MyscoreText.text = "Score : " + ScoreNum;
         }
     }
