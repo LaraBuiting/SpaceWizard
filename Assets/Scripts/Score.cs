@@ -16,12 +16,12 @@ public class Score : MonoBehaviour
         MyscoreText.text = "Score : " + ScoreNum;
     }
 
-    private void OnTriggerEnter2D(Collider2D Item)
+    private void OnTriggerEnter2D(Collider2D star)
     {
-        if (Item.tag == "Item")
+        if (star.tag == "Item")
         {
             ScoreNum++;
-            Destroy(Item.gameObject);
+            Destroy(star.gameObject);
             MyscoreText.text = "Score : " + ScoreNum;
         }
     }
