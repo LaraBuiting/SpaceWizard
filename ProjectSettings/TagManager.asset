@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Item
+  - star
+  - gem
   layers:
   - Default
   - TransparentFX

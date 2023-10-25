@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Score : MonoBehaviour
+public class GemScore : MonoBehaviour
 {
     public TextMeshProUGUI MyscoreText;
     private int ScoreNum;
@@ -13,16 +13,16 @@ public class Score : MonoBehaviour
     void Start()
     {
         ScoreNum = 0;
-        MyscoreText.text = "Stars  : " + ScoreNum;
+        MyscoreText.text = "Gems : " + ScoreNum;
     }
 
-    private void OnTriggerEnter2D(Collider2D star)
+    private void OnTriggerEnter2D(Collider2D gem)
     {
-        if (star.tag == "star")
+        if (gem.tag == "gem")
         {
             ScoreNum++;
-            Destroy(star.gameObject);
-            MyscoreText.text = "Stars  : " + ScoreNum;
+            Destroy(gem.gameObject);
+            MyscoreText.text = "Gems : " + ScoreNum;
         }
     }
 }

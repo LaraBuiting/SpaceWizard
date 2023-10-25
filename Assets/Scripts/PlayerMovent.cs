@@ -58,7 +58,6 @@ public class PlayerMovent : MonoBehaviour
         
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         animator.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal")));
-        Debug.Log(horizontal);
 
         //if (horizontal > 0.01f)
         //    transform.localScale = Vector3.one;
